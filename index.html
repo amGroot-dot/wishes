@@ -57,6 +57,19 @@
                 opacity: 0;
             }
         }
+        .play-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -67,13 +80,7 @@
             <h1>Merry Christmas 🎄</h1>
             <p>Wishing you a joyful holiday filled with love, laughter, and happiness!</p>
             <div class="greeting-images mt-4">
-            </div>
-        </div>
-
-        <div class="greeting-section">
-            <h1>Happy New Year 2025 🎉</h1>
-            <p>Cheers to a bright and prosperous New Year full of new opportunities and happiness!</p>
-            <div class="greeting-images mt-4">
+                <img src="https://source.unsplash.com/800x400/?christmas" alt="Christmas Image" class="img-fluid">
             </div>
         </div>
 
@@ -81,6 +88,13 @@
             <p>&copy; 2024 - Warm wishes for a colorful and joyful holiday season!</p>
         </footer>
     </div>
+
+    <audio id="jingleAudio" loop>
+        <source src="https://www.chosic.com/download-audio/29594/" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="play-button" onclick="playAudio()">Play Music 🎵</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -92,6 +106,12 @@
             snowflake.style.animationDelay = Math.random() * 5 + 's';
             snowContainer.appendChild(snowflake);
         }
+
+        function playAudio() {
+            const audio = document.getElementById('jingleAudio');
+            audio.play();
+        }
     </script>
 </body>
 </html>
+https://www.chosic.com/download-audio/29594/
